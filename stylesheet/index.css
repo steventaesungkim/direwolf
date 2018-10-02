@@ -71,3 +71,15 @@ body{
     align-items: center;
 }
 
+
+.profile-image{
+    width: 130px;
+}
+
+
+.profile-image img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
