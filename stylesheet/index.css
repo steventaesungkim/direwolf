@@ -1,21 +1,55 @@
 /* h1 - do not do because h1 can be different in different headers */
 /* #logo-text - id selector.. starts with # and matches with id attribute.. but not all browsers work like this */
 /* for any class selector, it starts with a . and matches any element that has that class name. When using class names, you start to build it in categories.. */
-.header-text{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+body{
+    /* outline: 3px, solid, black; */
 }
+
+
+.header-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* padding-left: 8px;
+    padding-right: 8px; */
+    padding: 0 8px;
+}
+
 
 .logo-text
 {
     /* color -- property game  rgba -- value (red, green, blue, alpha(transparency) [0 - 1.0]) */
-    color: rgba(61, 36, 36, 0.9); 
+    color: rgba(20, 22, 24, 0.966); 
     /* font-size: 1.5rem; */
     /* font-size: 1.5em; */
-    font-size: 25px;
+    font-size: 30px;
+    display: inline-block;
+    /* outline is broken into thickness, shape, color */
+    /* outline: 5px solid black; */
+    margin-right: 10px;
+    padding-right: 25px;
+    /* background: black */
 }
+
+
+.nav-container {
+    display: inline-block;
+    margin-right: 35px;
+}
+
+
 .nav-text
 {
     color: rgba(87, 90, 89, 0.9);
-    font-size: 10px;
+    padding-right: 8px;
+    font-size: 15px;
     text-decoration: none;
+}
+
+
+.wolf-image{
+    /* Because the image is in a different folder,
+    must use ../ images/filename */
+    background-image: url(../images/fog-foggy-hazy-89773.jpg);
+    min-height: 500px;
+    min-width: 100%;
 }
