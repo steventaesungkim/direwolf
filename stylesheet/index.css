@@ -79,7 +79,7 @@ body{
 }
 
 .profile-image{
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
 }
 
@@ -90,8 +90,16 @@ body{
 }
 
 
-@media screen and (min-width:500px) {
+@media screen and (min-width:550px) {
     .profile-image{
+        width: 200px;
         /* outline: 5px solid red; */
     }
+    .about-me{
+        display: flex;
+    }
+    .about-me > div{
+        outline: 1px solid red;
+    }
 }
+
