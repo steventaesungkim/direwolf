@@ -72,8 +72,15 @@ body{
 }
 
 
+.about-me{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 0 10px;
+}
+
 .profile-image{
-    width: 130px;
+    width: 300px;
+    margin: 0 auto;
 }
 
 
@@ -83,3 +90,8 @@ body{
 }
 
 
+@media screen and (min-width:500px) {
+    .profile-image{
+        /* outline: 5px solid red; */
+    }
+}
