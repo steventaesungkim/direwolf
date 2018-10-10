@@ -2,6 +2,35 @@
 /* #logo-text - id selector.. starts with # and matches with id attribute.. but not all browsers work like this */
 /* for any class selector, it starts with a . and matches any element that has that class name. When using class names, you start to build it in categories.. */
 
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        /* transform: rotate(0deg); */
+    }
+    50% {
+        transform: scale(5.5);
+        /* transform: rotate(120deg); */
+    }
+    100% {
+        transform: scale(1.5);
+        /* transform: rotate(360deg); */
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     /* outline: 3px, solid, black; */
 }
@@ -32,7 +61,8 @@ body{
 
 
 .nav-container {
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
     margin-right: 35px;
 }
 
@@ -53,6 +83,7 @@ body{
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    /* background-attachment: fixed; */
     min-height: 500px;
     min-width: 100%;
 }
@@ -60,7 +91,7 @@ body{
 
 .wolf-text{
     font-family: 'Homemade Apple', cursive;
-    font-size: 70px;
+    font-size: 25px;
     opacity: 0.3;
 }
 
@@ -81,6 +112,7 @@ body{
 .profile-image{
     width: 400px;
     margin: 0 auto;
+    padding-top: 15px;
 }
 
 
@@ -90,16 +122,79 @@ body{
 }
 
 
-@media screen and (min-width:550px) {
+.contact-links {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 8px 12px;
+    /* color: white; */
+    display: flex;
+    justify-content:flex-end;
+}
+
+.contact-links a{
+    margin: 0 6px;
+}
+
+
+.contact-links .fab,
+.contact-links .fas{
+    color: white;
+    margin: 0 10px;
+    font-size: 25px;
+    transition: all .5s ease-in-out .15s;
+}
+
+
+.contact-links a:hover .fab,
+.contact-links a:hover .fas {
+    color: black;
+    /* font-size: 40px; */
+    /* transform: scale(1.5); */
+    animation: zoom;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    /* animation-iteration-count: infinite; */
+}
+
+
+.contact-links a:hover {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
     .profile-image{
-        width: 200px;
+        width: 250px;
         /* outline: 5px solid red; */
     }
     .about-me{
         display: flex;
     }
     .about-me > div{
-        outline: 1px solid red;
+        /* outline: 1px solid red; */
+    }
+    .about-me-container{
+        width: 70%;
+        padding-right: 18px;
     }
 }
 
+@media screen and (min-width: 500px) {
+    .wolf-text{
+        font-size: 70px;
+        /* outline: 1px solid red; */
+    }
+
+    .header-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-text > * {
+        /* outline: 1px solid red; */
+    }
+
+    .nav-container {
+        display: inline-block;
+    }
+}
